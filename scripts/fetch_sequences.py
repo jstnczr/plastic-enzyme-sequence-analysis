@@ -29,7 +29,7 @@ with open(output_file, "w") as out_handle:
             rettype="fasta",
             retmode="text"
         )
-        
+
         # Read sequence and rename to know which enzyme it is
         record = SeqIO.read(handle, "fasta")
         record.id = enzyme_name  
