@@ -9,7 +9,7 @@ Entrez.email = "jtempora@uwaterloo.ca"
 enzymes = {
     "PETase_Ideonella_sakaiensis": "GAP38373.1",
     "MHETase_Ideonella_sakaiensis": "GAP38911.1",
-    "Cutinase_Thermobifida_fusca": "ADV92528.1",
+    "Cutinase_Thermobifida_fusca": "AAZ54921.1",
     "Lipase_Thermonospora_curvata": "CDN67545.1",
     "alkB_Pseudomonas_oleovorans": "CAB51047.1"
 }
