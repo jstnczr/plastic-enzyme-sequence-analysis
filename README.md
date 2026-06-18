@@ -13,7 +13,7 @@ biological solutions involves bacteria that have evolved enzymes capable of
 breaking down plastics like PET. This project was directly inspired by Dadzie (2022), 
 an MSc thesis proposal from the University of Waterloo on engineering *Pseudomonas 
 putida* KT2440 to convert plastic waste into PHA, a biodegradable bioplastic. The 
-thesis worked with four plastic-degrading genes — I wanted to understand those 
+thesis worked with four plastic-degrading genes and I wanted to understand those 
 same enzymes computationally: how related are they, and what do they share at 
 the sequence level?
 
