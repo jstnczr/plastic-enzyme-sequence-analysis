@@ -8,16 +8,14 @@
 
 ## Background
 
-Plastic pollution remains one of the most pressing environmental challenges of our 
-time. Recent research has identified microorganisms capable of enzymatically 
-degrading petrochemical plastics — offering a biological route to plastic waste 
-management. This project was inspired by Dadzie (2022), an MSc thesis proposal 
-from the University of Waterloo that explored engineering *Pseudomonas putida* 
-KT2440 to use PET and polyethylene waste as feedstock for producing PHA, a 
-biodegradable bioplastic. Before engineering better enzymes, it helps to understand 
-how they are evolutionarily related and which regions of their sequences are 
-functionally conserved. This project takes a computational approach to those 
-same enzymes.
+Plastic waste is a major environmental problem, and one of the more interesting 
+biological solutions involves bacteria that have evolved enzymes capable of 
+breaking down plastics like PET. This project was directly inspired by Dadzie (2022), 
+an MSc thesis proposal from the University of Waterloo on engineering *Pseudomonas 
+putida* KT2440 to convert plastic waste into PHA, a biodegradable bioplastic. The 
+thesis worked with four plastic-degrading genes — I wanted to understand those 
+same enzymes computationally: how related are they, and what do they share at 
+the sequence level?
 
 ---
 
@@ -48,12 +46,19 @@ same enzymes.
 
 ## Findings
 
-The distance matrix revealed that PETase shares ~45.6% sequence identity with both 
-Cut1 and Tcur1278, while Cut1 and Tcur1278 share 53.9% with each other — placing 
-all three firmly within the same serine hydrolase family. MHETase, despite coming 
-from the same organism as PETase, shares only 9-10% identity with the PET 
-hydrolases, indicating it is structurally unrelated. alkB sits even further apart 
-at 4-11% identity, consistent with its role as an alkane hydroxylase rather than 
-an ester hydrolase.
+PETase, Cut1, and Tcur1278 all share around 45-54% sequence identity with each 
+other, grouping together on the phylogenetic tree with strong bootstrap support. 
+This suggests they share a common evolutionary ancestor — PETase likely evolved 
+from a cutinase or lipase-type enzyme that adapted over time to degrade PET 
+specifically. MHETase, despite coming from the same organism as PETase, shares 
+less than 10% identity with the other PET hydrolases and sits on its own branch 
+entirely — it's a structurally different enzyme that just happens to work alongside 
+PETase in *I. sakaiensis*. alkB is the most distant of all, consistent with it 
+being a completely different class of enzyme targeting polyethylene rather than PET.
 
-The phylogenetic tree confirms these
+Conservation analysis found 109 positions (14.2% of the alignment) that are 
+identical across PETase, Cut1, and Tcur1278. Among these are the catalytic triad 
+residues Ser, His, and Asp — the three amino acids that actually perform the 
+chemistry of breaking PET's ester bonds. These conserved positions are the 
+functional core of PET hydrolase activity and would need to be preserved in any 
+protein engineering effort.
