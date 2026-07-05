@@ -1,32 +1,26 @@
-# Load the PETase crystal structure directly from the PDB
-fetch 6eqe, async=0
+# PyMOL visualization script for PETase structure
+# PDB ID: 6EQE - PETase from Ideonella sakaiensis
 
-# Remove water molecules so they don't clutter the view
+# Load PETase structure from Protein Data Bank
+fetch 6EQE
+
+# Remove water molecules so they don't clutter the image
 remove solvent
 
-# Show the protein as a cartoon (ribbons showing the fold)
+# Basic display settings
+bg_color white
 hide everything
 show cartoon
-color grey80
 
-# Select the three catalytic triad residues
-select catalytic_ser, resi 160 and resn SER
-select catalytic_asp, resi 206 and resn ASP
-select catalytic_his, resi 237 and resn HIS
+# Colour the whole protein grey
+color grey80, all
 
-# Show the triad residues as sticks so their side chains are visible
-show sticks, catalytic_ser or catalytic_asp or catalytic_his
+# Highlight the catalytic triad - Ser160, Asp206, His237
+# (verified against PDB 6EQE numbering and multiple published sources)
+select catalytic_triad, resi 160+206+237
+color red, catalytic_triad
+show sticks, catalytic_triad
 
-# Color each residue distinctly
-color red, catalytic_ser
-color blue, catalytic_asp
-color orange, catalytic_his
-
-# Zoom in on the active site
-zoom catalytic_ser or catalytic_asp or catalytic_his, 8
-
-# Set a clean white background for the saved image
-bg_color white
-
-# Save the image
-png results/petase_structure.png, width=1200, height=1000, dpi=150, ray=1
+# Save image
+ray 1200, 900
+png results/petase_structure.png
