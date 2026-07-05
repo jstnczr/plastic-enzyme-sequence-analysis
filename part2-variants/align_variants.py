@@ -33,4 +33,3 @@ print(f"Alignment length: {len(alignment[0].seq)} positions")
 print("\nFirst 60 positions of alignment:")
 for record in alignment:
     print(f"{record.id[:40]:<40} {str(record.seq[:60])}")
-    
