@@ -11,3 +11,6 @@ __pycache__/
 # R temporary files
 .Rhistory
 .RData
+
+# Downloaded PDB structure files
+*.cif
