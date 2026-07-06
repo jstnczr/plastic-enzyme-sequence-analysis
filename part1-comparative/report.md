@@ -253,13 +253,13 @@ for plastics depolymerization. Proceedings of the National Academy of Sciences.
 
 Maurya, A., Bhattacharya, A., Khare, S.K. 2020. Enzymatic remediation of
 polyethylene terephthalate (PET)-based polymers for effective management of plastic
-wastes. Frontiers in Bioengineering and Biotechnology. 8: 1332.
+wastes. Frontiers in Bioengineering and Biotechnology. 8: 602325.
 
 Paradis, E., Schliep, K. 2019. ape 5.0: an environment for modern phylogenetics
 and evolutionary analyses in R. Bioinformatics. 35: 526-528.
 
-van Beilen, J.B. et al. 1994. Functional analysis of alkane hydroxylases from
-gram-negative and gram-positive bacteria. Journal of Bacteriology. 176: 1704-1709.
+van Beilen, J.B., Wubbolts, M.G., Witholt, B. 1994. Genetics of alkane oxidation
+by Pseudomonas oleovorans. Biodegradation. 5: 161-174.
 
 Yoshida, S. et al. 2016. A bacterium that degrades and assimilates poly(ethylene
 terephthalate). Science. 351: 1196-1199.
