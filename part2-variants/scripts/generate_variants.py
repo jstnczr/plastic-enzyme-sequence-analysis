@@ -4,9 +4,11 @@ from Bio.Seq import Seq, MutableSeq
 from Bio.SeqRecord import SeqRecord
 import os
 
-# Load the wild-type PETase sequence from Part 1
+# script_dir points to part2-variants/scripts
 script_dir = os.path.dirname(os.path.abspath(__file__))
-part1_fasta = os.path.join(script_dir, "..", "part1-comparative", "data", "plastic_enzymes.fasta")
+
+# Load the wild-type PETase sequence from Part 1 (up two levels, then into part1)
+part1_fasta = os.path.join(script_dir, "..", "..", "part1-comparative", "data", "plastic_enzymes.fasta")
 
 sequences = {r.id: r for r in SeqIO.parse(part1_fasta, "fasta")}
 wildtype = sequences["PETase_Ideonella_sakaiensis"]
@@ -42,9 +44,9 @@ variants = {
     ]
 }
 
-# Create output directory
-os.makedirs("data", exist_ok=True)
-output_file = os.path.join("data", "petase_variants.fasta")
+# Output goes into part2-variants/data (up one level from scripts)
+os.makedirs(os.path.join(script_dir, "..", "data"), exist_ok=True)
+output_file = os.path.join(script_dir, "..", "data", "petase_variants.fasta")
 
 # Start with wild-type as the baseline
 all_records = []

@@ -2,11 +2,11 @@
 from Bio import SeqIO
 import os
 
-# script_dir always points to part2-variants, no matter where you run this from
+# script_dir points to part2-variants/scripts
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Load the aligned sequences from Script 2
-input_file = os.path.join(script_dir, "data", "aligned_variants.fasta")
+# Load the aligned sequences (data is one level up, in part2-variants/data)
+input_file = os.path.join(script_dir, "..", "data", "aligned_variants.fasta")
 alignment = list(SeqIO.parse(input_file, "fasta"))
 
 # Turn the list of records into a dictionary so we can look up by name

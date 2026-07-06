@@ -3,16 +3,13 @@ import subprocess
 from Bio import SeqIO
 import os
 
-# __file__ is the full path to this script (e.g. .../part2-variants/align_variants.py)
-# os.path.dirname() strips off the filename, leaving just the folder path
-# This means script_dir always points to part2-variants, no matter which
-# folder you were standing in when you ran the script
+# script_dir points to part2-variants/scripts
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Input and output file paths
-input_file = os.path.join(script_dir, "data", "petase_variants.fasta")
-output_file = os.path.join(script_dir, "data", "aligned_variants.fasta")
-muscle_exe = os.path.join(script_dir, "..", "muscle-win64.v5.3.exe")
+# Input and output file paths (data is one level up, in part2-variants/data)
+input_file = os.path.join(script_dir, "..", "data", "petase_variants.fasta")
+output_file = os.path.join(script_dir, "..", "data", "aligned_variants.fasta")
+muscle_exe = os.path.join(script_dir, "..", "..", "muscle-win64.v5.3.exe")
 
 # Run MUSCLE to align the sequences
 print("Running MUSCLE alignment...")
